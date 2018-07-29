@@ -29,7 +29,6 @@ public class App
         jmsTemplate.setTimeToLive(10000);
         jmsTemplate.setDeliveryMode(DeliveryMode.NON_PERSISTENT);
         System.out.println("++++++++++++++++++++++++++++"+jmsTemplate.isExplicitQosEnabled());
-        System.out.println("++++++++++++++++++++++++++++"+jmsTemplate.isExplicitQosEnabled());
         jmsTemplate.convertAndSend("mailbox",new Email("satish","Hi satish, How are you"));
         JmsListenerEndpointRegistry jmsListenerEndpointRegistry=configurableApplicationContext.getBean( JmsListenerEndpointRegistry.class);
         for(MessageListenerContainer messageListenerContainer:jmsListenerEndpointRegistry.getListenerContainers()){
