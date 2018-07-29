@@ -36,7 +36,6 @@ public class App
                     (DefaultMessageListenerContainer)messageListenerContainer;
             defaultMessageListenerContainer.shutdown();
         }
-
         System.out.println("exiting main......................");
     }
 }
